@@ -293,7 +293,7 @@ function closeResultWindow() {
 function initCommon() {
   var page = window.location.pathname.split("/").pop().toLowerCase();
   if (page === "") {
-    page = "Index.html";
+    page = "index.html";
   }
   $("#nav li:not(.exit) a").each(function () {
     if ($(this).attr("href").toLowerCase() === page) {
@@ -313,8 +313,8 @@ function initCommon() {
   });
 }
 
-/* صفحة Index.html: إظهار/إخفاء الملاحظات */
-function initIndexPage() {
+/* صفحة index.html: إظهار/إخفاء الملاحظات */
+function initindexPage() {
   $("#toggleNotes").click(function () {
     $("#notesBox").slideToggle(250);
   });
@@ -416,7 +416,7 @@ function initCarsPage() {
 /* نقطة الدخول: تُستدعى عند اكتمال تحميل الصفحة */
 $(document).ready(function () {
   initCommon();
-  if ($("#toggleNotes").length) { initIndexPage(); }
+  if ($("#toggleNotes").length) { initindexPage(); }
   if ($("#branchTable").length) { initAboutPage(); }
   if ($("#carsTable").length) { initCarsPage(); }
 });
